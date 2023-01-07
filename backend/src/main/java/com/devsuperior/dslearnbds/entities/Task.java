@@ -6,10 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "tb_task")
-public class Task extends Lesson{
+public class Task extends Lesson {
 	private static final long serialVersionUID = 1L;
 
 	private String description;
@@ -17,9 +16,9 @@ public class Task extends Lesson{
 	private Integer approvalCount;
 	private Double weight;
 	
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")	
 	private Instant dueDate;
-
+	
 	public Task() {
 	}
 
@@ -41,11 +40,11 @@ public class Task extends Lesson{
 		this.description = description;
 	}
 
-	public Integer getquestionCount() {
+	public Integer getQuestionCount() {
 		return questionCount;
 	}
 
-	public void setquestionCount(Integer questionCount) {
+	public void setQuestionCount(Integer questionCount) {
 		this.questionCount = questionCount;
 	}
 
@@ -72,7 +71,4 @@ public class Task extends Lesson{
 	public void setDueDate(Instant dueDate) {
 		this.dueDate = dueDate;
 	}
-	
-	
-	
 }
